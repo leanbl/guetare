@@ -6,34 +6,84 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
       background-color: #f9f9f9;
+      padding: 40px;
     }
+
     .product {
       background: white;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      max-width: 400px;
+      max-width: 700px;
       margin: auto;
     }
-    .product img {
-      width: 100%;
-      border-radius: 8px;
+
+    .product h1 {
+      text-align: center;
     }
+
+    .product-container {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .product img {
+      width: 300px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .product-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .price-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
     .price {
       font-size: 24px;
       color: #2ecc71;
-      margin-top: 10px;
+      margin: 0;
+    }
+
+    .buy-button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .buy-button:hover {
+      background-color: #2980b9;
     }
   </style>
 </head>
 <body>
   <div class="product">
     <h1>Gu-E-tare</h1>
-    <img src="guetare.png" alt="Gu-E-tare" width="400">
-    <p class="price">1999,99 €</p>
+    <div class="product-container">
+      <img src="guetare.png" alt="Gu-E-tare">
+      <div class="product-info">
+        <div class="price-button">
+          <p class="price">1999,99 €</p>
+          <button class="buy-button">Acheter</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
